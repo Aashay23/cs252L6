@@ -17,7 +17,6 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:keepScreenOn="true"
-        android:text="@string/dummy_content"
         android:textColor="#33b5e5"
         android:textSize="50sp"
         android:textStyle="bold" />
@@ -30,7 +29,9 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true" >
+        android:addStatesFromChildren="false"
+        android:fitsSystemWindows="false"
+        android:textAlignment="gravity" >
 
         <LinearLayout
             android:id="@+id/fullscreen_content_controls"
@@ -41,15 +42,36 @@
             android:background="@color/black_overlay"
             android:orientation="horizontal"
             tools:ignore="UselessParent" >
-
+<!-- 
             <Button
                 android:id="@+id/dummy_button"
                 style="?buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_button" />
+                android:layout_width="fill_parent"
+                android:layout_height="213dp"
+                android:layout_gravity="bottom"
+                android:onClick="selfDestruct"
+                android:text="SelfDestruct" />
+-->
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button1"
+            style="?buttonBarButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="212dp"
+            android:layout_gravity="start"
+            android:onClick="selfDestruct"
+            android:text="GENERATE" />
+
+        <Button
+            android:id="@+id/button1"
+            style="?buttonBarButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="212dp"
+            android:layout_gravity="bottom|start"
+            android:onClick="selfDestruct"
+            android:text="Scan" />
+        
     </FrameLayout>
 
 </FrameLayout>
